@@ -1,0 +1,7 @@
+{
+	"short_name" : "Dumbest Clicker",
+	"start_url" : "index.html",
+	"display" : "standalone",
+	"scope" : "/dumbest-clicker",
+	"theme-color" : "#9e9e9e45"
+}

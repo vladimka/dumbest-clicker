@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Fun</title>
+	<link rel="stylesheet" href="styles.css">
+	<script>
+		if('serviceWorker' in navigator){
+			navigator.serviceWorker.register('/dumbest-clicker/sw.js')
+				.then(registration => console.log('Registration successful, scope is:', registration.scope))
+				.catch(err => console.error('Service worker registration failed, error:', err));
+		}
+	</script>
+</head>
+<body>
+	<div class="user-info">
+		<p>Balance: <span id="balance">0</span>$</p>
+		<p>You getting <span id="income">1</span>$/s</p>
+	</div>
+	<div class="tabs-buttons">
+		<button class="tab-button main active">Main</button>
+		<button class="tab-button options">Options</button>
+	</div>
+	<div class="tabs">
+		<div class="tab main active">
+			<p class="tab-header">Main</p><hr>
+			<div class="tab-content">
+				<p>Upgrade income: <span id="upIncomeCost">10</span>$</p>
+				<button onclick="upgradeIncome()">Upgrade</button>
+			</div>
+		</div>
+		<div class="tab options">
+			<p class="tab-header">Options</p><hr>
+			<div class="tab-content">
+				<button onclick="_save()">Save</button>
+				<p>Auto Save</p>
+				<button id="autoSaveBtn" onclick="toggleAutoSave()">Enabled</button>
+			</div>
+		</div>
+	</div>
+	<script src="scripts/tabs.js"></script>
+	<script src="scripts/break_eternity.min.js"></script>
+	<script src="scripts/save_manager.js"></script>
+	<script src="scripts/render_loop.js"></script>
+	<script src="scripts/button-handlers.js"></script>
+	<script src="scripts/index.js"></script>
+</body>
+</html>
