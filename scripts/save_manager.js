@@ -14,7 +14,7 @@ function _save(){
 }
 
 function load(){
-	save = JSON.parse(localStorage.getItem('save'));
+	save = JSON.parse(localStorage.getItem('save')) || {};
 
 	save.user.balance = new Decimal(save.user.balance);
 	save.user.income = new Decimal(save.user.income);
