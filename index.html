@@ -27,14 +27,17 @@
 		<div class="tab main active">
 			<p class="tab-header">Main</p><hr>
 			<div class="tab-content">
-				<p>Upgrade income: <span id="upIncomeCost">10</span>$</p>
-				<button onclick="upgradeIncome()">Upgrade</button>
+				<p>Income upgrade 1: <span id="upIncome1Cost">10</span>$</p>
+				<button onclick="upgradeIncome1()">Buy</button><br>
+				<p>Income upgrade 2: <span id="upIncome2Cost">100</span>$</p>
+				<button onclick="upgradeIncome2()">Buy</button><br>
 			</div>
 		</div>
 		<div class="tab options">
 			<p class="tab-header">Options</p><hr>
 			<div class="tab-content">
 				<button onclick="_save()">Save</button>
+				<button onclick="resetSave()">Reset</button>
 				<p>Auto Save</p>
 				<button id="autoSaveBtn" onclick="toggleAutoSave()">Enabled</button>
 			</div>
